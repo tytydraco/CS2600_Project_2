@@ -1,16 +1,26 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-int ask_total_days();
-char* ask_departure_time();
-char* ask_arrival_time();
-int ask_round_trip_fare();
-int ask_car_rental();
-int ask_miles_driven();
-int ask_parking_fees();
-int ask_taxi_fees();
-int ask_conf_seminar_fees();
-int ask_hotel();
-int ask_each_meal();
+#define STR_BUFFER_SIZE 64
+
+struct InputData {
+    int total_days;
+    char departure_time[STR_BUFFER_SIZE];
+    char arrival_time[STR_BUFFER_SIZE];
+    int round_trip_fare;
+    int car_rental;
+    int miles_driven;
+    int parking_fees;
+    int taxi_fees;
+    int conf_seminar_fees;
+    int hotel;
+    int breakfast;
+    int lunch;
+    int dinner;
+};
+
+extern struct InputData input_data;
+
+void request_input_data();
 
 #endif
