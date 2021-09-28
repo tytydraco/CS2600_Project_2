@@ -22,5 +22,6 @@ struct InputData {
 extern struct InputData input_data;
 
 void request_input_data();
+void assert_valid_input();
 
 #endif
