@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #include "input.h"
 
@@ -15,6 +16,20 @@ static void ui_str(char* query, char* buffer) {
     fgets(buffer, STR_BUFFER_SIZE, stdin);
 }
 
+static bool is_valid_time_format(char* time_str) {
+    int hour;
+    int minute;
+
+    sscanf(time_str, "%d:%d", &hour, &minute);
+
+    if (hour < 0 || hour > 24)
+        return false;
+    if (minute < 0 || minute > 59)
+        return false;
+    
+    return true;
+}
+
 static int ui_int(char* query) {
     char buffer[64];
 
@@ -26,8 +41,8 @@ static int ui_int(char* query) {
 
 void request_input_data() {
     input_data.total_days = ui_int("Total days spent on the trip");
-    ui_str("Departure time", input_data.departure_time);
-    ui_str("Arrival time", input_data.arrival_time);
+    ui_str("Departure time (HH:MM)", input_data.departure_time);
+    ui_str("Arrival time (HH:MM)", input_data.arrival_time);
     input_data.round_trip_fare = ui_int("Price of round trip fare");
     input_data.car_rental = ui_int("Price of car rental");
     input_data.miles_driven = ui_int("Number of miles driven");
@@ -60,5 +75,7 @@ void assert_valid_input() {
         input_data.dinner < 0)
         panic("Cannot have negative number of meals");
     
-    // TODO: date validation
+    if (!is_valid_time_format(input_data.departure_time) ||
+        !is_valid_time_format(input_data.arrival_time))
+        panic("Time format is invalid");
 }
