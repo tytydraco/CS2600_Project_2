@@ -30,10 +30,10 @@ float calculations(){
     float allowedTaxi = 10*numOfDays;
     float taxiFees = input_data.taxi_fees;
     float allowedHotelExpense = 90*numOfDays;
-    float over = 0;
-    float under =0;
+    over = 0;
+    under =0;
     //so far this is the total of thing that don't need to be calculated.
-    float total = round_trip_faire + priceOfCarRentals + vechileExpense + conference;
+    total = round_trip_faire + priceOfCarRentals + vechileExpense + conference;
 
     // calc parking fees.
     if(allowedParkingFees < parkingFees){
