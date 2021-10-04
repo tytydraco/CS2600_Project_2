@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 #include "input.h"
-#include "foodCalc.c"
+#include "foodCalc.h"
 
 struct InputData input_data;
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#include "input.c"
-#include "calculations.c"
+#include "input.h"
+#include "calculations.h"
 
 int main(int argc, const char* argv[]) {
 
