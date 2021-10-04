@@ -72,7 +72,7 @@ void calcMeal(float *total, float *allowableExpenses, float *excess, float *savi
                 totalExpenses(lunch, 0, total, allowableExpenses, excess, savings);
                 totalExpenses(dinner, 0, total, allowableExpenses, excess, savings);
             }
-        } else if(counter == days)
+        } else if(counter == (days - 1))
         {
             if(endTime < 8)
             {
@@ -102,18 +102,4 @@ void calcMeal(float *total, float *allowableExpenses, float *excess, float *savi
             totalExpenses(dinner, dinnerExpense, total, allowableExpenses, excess, savings);
         }
     }
-}
-
-int main()
-{
-    float totalExpenses = 0;
-    float allowableExpenses = 0;
-    float excess = 0;
-    float savings = 0;
-    int days = 5;
-    int start = 12;
-    int end = 3;
-    calcMeal(&totalExpenses, &allowableExpenses, &excess, &savings, days, start, end);
-    printf("Total Expenses: %.2f, Total Allowable Expenses: %.2f, Excess: %.2f, Saved %.2f", totalExpenses, allowableExpenses, excess, savings);
-    return 0;
 }
