@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#include "input.h"
 
 /*
      main struct hold little variables
@@ -16,17 +17,17 @@
 
 float calculations(){
     //dummy variables
-    int numOfDays = 0;
-    int round_trip_faire = 0;
-    int priceOfCarRentals = 0;
-    float conference = 0;
-    float hotelExpense;
+    int numOfDays = input_data.total_days;
+    int round_trip_faire = input_data.round_trip_fare;
+    int priceOfCarRentals = input_data.car_rental;
+    float conference = input_data.conf_seminar_fees;
+    float hotelExpense = input_data.hotel;
     float mealCost;
-    float vechileExpense = 0.27 * miles_driven;
+    float vechileExpense = 0.27 * input_data.miles_driven;
     float allowedParkingFees = 6*numOfDays;
-    float parkingFees = parking_fees;
+    float parkingFees = input_data.parking_fees;
     float allowedTaxi = 10*numOfDays;
-    float taxiFees = taxi_fees;
+    float taxiFees = input_data.taxi_fees;
     float allowedHotelExpense = 90*numOfDays;
     float over = 0;
     float under =0;
