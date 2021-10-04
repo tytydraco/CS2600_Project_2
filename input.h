@@ -14,14 +14,18 @@ struct InputData {
     int taxi_fees;
     int conf_seminar_fees;
     int hotel;
-    int breakfast;
-    int lunch;
-    int dinner;
+    //int breakfast;
+    //int lunch;
+    //int dinner;
+    float mealTotalExpenses;
+    float mealTotalAllowed;
+    float mealExcess;
+    float mealSavings;
 };
 
-extern struct InputData input_data;
+//extern struct InputData input_data;
 
-void request_input_data();
-void assert_valid_input();
+struct InputData request_input_data();
+void assert_valid_input(struct InputData input_data);
 
 #endif
