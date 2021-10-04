@@ -36,6 +36,8 @@ static float askForFoodCosts(char* meal)
 
 void calcMeal(float *total, float *allowableExpenses, float *excess, float *savings, int days, int startTime, int endTime)
 {
+    *excess = 0;
+    *savings = 0;
     for(int counter = 0; counter < days; counter++)
     {
         char bf[] = "Breakfast";

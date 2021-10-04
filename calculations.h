@@ -4,7 +4,8 @@
 extern float over;
 extern float under;
 extern float total;
+extern float totalAllowable;
 
-float calculations();
+void calculations();
 
 #endif

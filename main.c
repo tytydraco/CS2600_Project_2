@@ -1,19 +1,22 @@
 #include <stdio.h>
 
-#include "input.h"
-#include "foodCalc.h"
-#include "calculations.h"
+#include "input.c"
+#include "calculations.c"
 
 int main(int argc, const char* argv[]) {
-  request_input_data();
-  assert_valid_input();
 
-  calculations();
+  struct InputData b;
+
+  b = request_input_data();
+  assert_valid_input(b);
+
+  calculations(b);
 
   printf("calculations ---");
-  printf("\tTotal: %f", total);
-  printf("\tOver: %f", over);
-  printf("\tUnder: %f", under);
+  printf("\nTotal: %0.2f", total);
+  printf("\nAllowed: %0.2f", totalAllowable);
+  printf("\nOver: %0.2f", over);
+  printf("\nUnder: %0.2f", under);
 
   return 0;
 }
