@@ -5,8 +5,8 @@
 
 struct InputData {
     int total_days;
-    char departure_time[STR_BUFFER_SIZE];
-    char arrival_time[STR_BUFFER_SIZE];
+    int departure_time;
+    int arrival_time;
     int round_trip_fare;
     int car_rental;
     int miles_driven;
