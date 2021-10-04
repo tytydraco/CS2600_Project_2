@@ -104,7 +104,7 @@ void calcMeal(float *total, float *allowableExpenses, float *excess, float *savi
     }
 }
 
-int main()
+/*int main()
 {
     float totalExpenses = 0;
     float allowableExpenses = 0;
@@ -116,4 +116,4 @@ int main()
     calcMeal(&totalExpenses, &allowableExpenses, &excess, &savings, days, start, end);
     printf("Total Expenses: %.2f, Total Allowable Expenses: %.2f, Excess: %.2f, Saved %.2f", totalExpenses, allowableExpenses, excess, savings);
     return 0;
-}
+}*/
