@@ -3,6 +3,10 @@
 #include "calculations.h"
 #include "input.h"
 
+float over = 0;
+float under = 0;
+float total = 0;
+
 /*
      main struct hold little variables
 
