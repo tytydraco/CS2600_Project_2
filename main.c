@@ -16,7 +16,7 @@ int main(int argc, const char* argv[]) {
   printf("\nTotal: %0.2f", total);
   printf("\nAllowed: %0.2f", totalAllowable);
   printf("\nOver: %0.2f", over);
-  printf("\nUnder: %0.2f", under);
+  printf("\nUnder: %0.2f\n", under);
 
   return 0;
 }
