@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#include "calculations.h"
 #include "input.h"
 
 /*
