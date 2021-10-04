@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#include "foodCalc.h"
 #include "input.h"
 
 static void totalExpenses(float mealCost, float allowedExpenses, float *total, float *allowableExpenses, float *excess, float *savings)
